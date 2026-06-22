@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SpotQ - Scan QR code to join the restaurant queue instantly.">
+    <title>SpotQ | Scan QR Code</title>
+    <link rel="icon" type="image/jpeg" href="assets/SpotQ.jpeg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="SpotQ Logo" onerror="this.style.display='none'">
+            SpotQ
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="restaurant.html">Restaurant Ops</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" id="mobileMenu">
+        <button class="close-menu" onclick="toggleMenu()">✕</button>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="restaurant.html" onclick="toggleMenu()">Restaurant Ops</a>
+        <a href="about.html" onclick="toggleMenu()">About</a>
+    </div>
+
+    <!-- QR Code Section -->
+    <section class="hero" style="min-height: 100vh;">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div style="position: relative; z-index: 2; width: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="glass" style="text-align: center; padding: 50px 40px; max-width: 500px; width: 90%; border-radius: 24px;">
+                <h2 style="margin-bottom: 16px; font-size: 2.2rem;">Scan to <span class="text-gradient">Join</span></h2>
+                <p style="margin-bottom: 32px;">Scan this QR code with your phone camera to join the SpotQ waitlist instantly.</p>
+                <img src="assets/qr_code.png" alt="Scan QR Code" style="max-width: 100%; border-radius: 20px; box-shadow: 0 0 25px rgba(0, 208, 132, 0.25); margin-bottom: 32px;">
+                <br>
+                <a href="index.html" class="btn btn-secondary" style="font-size: 1rem; padding: 14px 32px;">← Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

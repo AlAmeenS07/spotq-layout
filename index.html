@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SpotQ - The future of premium restaurant experiences.">
+    <title>SpotQ | Premium Restaurant Queue Management</title>
+    <link rel="icon" type="image/jpeg" href="assets/SpotQ.jpeg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="SpotQ Logo" onerror="this.style.display='none'">
+            SpotQ
+        </a>
+        <nav class="nav-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#demo">Live Demo</a>
+            <a href="#features">Features</a>
+            <a href="restaurant.html">Restaurant Ops</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" id="mobileMenu">
+        <button class="close-menu" onclick="toggleMenu()">✕</button>
+        <a href="#how-it-works" onclick="toggleMenu()">How It Works</a>
+        <a href="#demo" onclick="toggleMenu()">Live Demo</a>
+        <a href="#features" onclick="toggleMenu()">Features</a>
+        <a href="restaurant.html" onclick="toggleMenu()">Restaurant Ops</a>
+        <a href="about.html" onclick="toggleMenu()">About</a>
+    </div>
+
+    <!-- SECTION 1: Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text reveal">
+                <!-- <div class="badge">AI-Powered Queue Experience</div> -->
+                <h1>Skip the Wait.<br><span class="text-gradient">Enjoy the Experience.</span></h1>
+                <p>Join restaurant queues remotely, track live wait times, and arrive exactly when your table is ready.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="scrollToDemo()">Join Queue</button>
+                    <a href="#demo" class="btn btn-secondary">Watch Demo</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual reveal delay-2">
+                <div class="widget glass">
+                    <div class="widget-row">
+                        <div>
+                            <div class="widget-label">Current Position</div>
+                            <div class="widget-value">#4</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div class="widget-label">Estimated Wait</div>
+                            <div class="widget-value amber">12 <span style="font-size: 1.2rem;">Min</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="widget-status">
+                        <div class="pulse"></div>
+                        <div>
+                            <div class="widget-label" style="margin: 0;">Status</div>
+                            <div style="font-weight: 600; font-size: 1.1rem;">Preparing Table</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Problem -->
+    <section class="container" style="padding-top: 100px;">
+        <div class="problem-grid">
+            <div class="problem-img glass reveal">
+                <!-- Fallback to restaurant_bg if problem_waiting isn't available -->
+            </div>
+            <div class="reveal delay-2">
+                <h2>The old way is broken.</h2>
+                <ul class="pain-points">
+                    <li><span>✕</span> Unpredictable, long waiting times.</li>
+                    <li><span>✕</span> Anxious crowds blocking the entrance.</li>
+                    <li><span>✕</span> Customers tethered to pagers.</li>
+                    <li><span>✕</span> Host staff overwhelmed by questions.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: How SpotQ Works -->
+    <section id="how-it-works" class="container">
+        <h2 class="reveal" style="text-align: center;">A Seamless Journey</h2>
+        <div class="timeline-wrapper reveal delay-1">
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="step-circle">1</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Choose Restaurant</h4>
+                        <p style="font-size: 0.95rem;">Find premium dining spots near you.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-circle">2</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Join Queue</h4>
+                        <p style="font-size: 0.95rem;">Enter the waitlist from anywhere.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-circle">3</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Track ETA</h4>
+                        <p style="font-size: 0.95rem;">Watch your position move live.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-circle">4</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Notification</h4>
+                        <p style="font-size: 0.95rem;">Get alerted when your table is ready.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-circle">5</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Get Seated</h4>
+                        <p style="font-size: 0.95rem;">Walk in and sit down instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Live Queue Demo -->
+    <section id="demo" class="demo-section" style="padding: 100px 24px;">
+        <div class="demo-container reveal">
+            <h2 style="text-align: center; margin-bottom: 40px;">Experience It Live</h2>
+            <div class="glass widget" style="animation: none;">
+                <div id="demo-content">
+                    <h3 style="margin-bottom: 24px;">Ready to grab a table?</h3>
+                    <button class="btn btn-primary" onclick="startDemo()" style="width: 100%;">Click to Join Queue</button>
+                </div>
+                
+                <div id="demo-active" style="display: none; text-align: left;">
+                    <div class="widget-row">
+                        <div>
+                            <div class="widget-label">Your Position</div>
+                            <div class="widget-value" id="demo-pos">#4</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div class="widget-label">Est. Wait</div>
+                            <div class="widget-value amber" id="demo-eta">12 <span style="font-size: 1.2rem;">Min</span></div>
+                        </div>
+                    </div>
+                    <div class="widget-status">
+                        <div class="pulse" id="demo-pulse"></div>
+                        <div>
+                            <div class="widget-label" style="margin: 0;">Status</div>
+                            <div style="font-weight: 600; font-size: 1.1rem;" id="demo-status">In Queue</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Features (Bento Grid) -->
+    <section id="features" class="container">
+        <h2 class="reveal" style="text-align: center;">Built for the Future</h2>
+        <div class="bento-grid">
+            <div class="bento-card glass bento-1 reveal delay-1">
+                <div class="bento-icon">📲</div>
+                <h3>Remote Queue Joining</h3>
+                <p>Allow customers to add themselves to your waitlist before they even arrive, giving them freedom while they wait.</p>
+            </div>
+            <div class="bento-card glass bento-2 reveal delay-2">
+                <div class="bento-icon">🧠</div>
+                <h3>AI Prediction</h3>
+                <p>Machine learning models predict table turnover with incredible accuracy.</p>
+            </div>
+            <div class="bento-card glass bento-3 reveal delay-1">
+                <div class="bento-icon">📍</div>
+                <h3>Live Tracking</h3>
+                <p>Customers can see exactly where they stand in real-time.</p>
+            </div>
+            <div class="bento-card glass bento-4 reveal delay-2">
+                <div class="bento-icon">📊</div>
+                <h3>Smart Analytics</h3>
+                <p>Get deep insights into wait times, customer retention, and peak hour performance in your dedicated dashboard.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: Restaurant Benefits -->
+    <section id="benefits" class="container">
+        <div class="problem-grid">
+            <div class="reveal">
+                <h2>Elevate Your Operations.</h2>
+                <ul class="benefits-list">
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Reduce crowd congestion at entrance.
+                    </li>
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Improve customer satisfaction.
+                    </li>
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Reduce host staff workload.
+                    </li>
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Optimize table utilization.
+                    </li>
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Digitize queue operations.
+                    </li>
+                </ul>
+            </div>
+            <div class="reveal delay-2">
+                <img src="assets/restaurant_benefits.png" alt="Premium Restaurant" style="width: 100%; border-radius: 24px; box-shadow: var(--glass-shadow);">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: Testimonials -->
+    <section class="container" style="overflow: hidden;">
+        <h2 class="reveal" style="text-align: center;">Loved by the Best</h2>
+        <div class="testimonials-scroll reveal delay-1">
+            <div class="testimonial-card glass">
+                <p class="quote">"SpotQ completely transformed our Friday nights. The entrance is no longer a chaotic crowd, and customers sit down happier."</p>
+                <div class="author">Michael T., Restaurant Owner</div>
+            </div>
+            <div class="testimonial-card glass">
+                <p class="quote">"The AI predictions are incredibly accurate. Our hosts can finally focus on hospitality instead of guessing wait times."</p>
+                <div class="author">Sarah L., Cafe Manager</div>
+            </div>
+            <div class="testimonial-card glass">
+                <p class="quote">"I joined the queue from my car, grabbed a coffee nearby, and walked right to my table. Dining out feels luxurious again."</p>
+                <div class="author">David K., Customer</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: Final CTA -->
+    <section class="final-cta">
+        <div class="container reveal">
+            <h2 style="font-size: 3rem; margin-bottom: 40px; text-shadow: var(--neon-amber-strong);">Transform Restaurant Waiting Into A Better Experience.</h2>
+            <p style="margin-bottom: 40px; font-size: 1.25rem;">Join the future of restaurant queue management.</p>
+            <button class="btn btn-primary" onclick="scrollToDemo()" style="font-size: 1.25rem; padding: 20px 48px; box-shadow: var(--neon-amber-strong);">Get Started With SpotQ</button>
+        </div>
+    </section>
+
+    <!-- SECTION 9: Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="assets/logo.png" alt="SpotQ Logo" onerror="this.style.display='none'">
+                SpotQ
+            </div>
+
+            <div style="color: var(--text-muted); font-size: 0.9rem;">
+                © 2026 SpotQ Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="sticky-bottom-cta">
+        <button class="btn btn-primary" onclick="scrollToDemo()">Join Queue</button>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Scroll to demo
+        function scrollToDemo() {
+            document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Intersection Observer for scroll animations (Framer Motion style)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Live Demo Simulation
+        function startDemo() {
+            document.getElementById('demo-content').style.display = 'none';
+            document.getElementById('demo-active').style.display = 'block';
+            
+            let pos = 4;
+            let time = 12;
+            
+            const interval = setInterval(() => {
+                if(pos > 1) {
+                    pos--;
+                    time -= 3;
+                    document.getElementById('demo-pos').innerText = `#${pos}`;
+                    document.getElementById('demo-eta').innerHTML = `${time} <span style="font-size: 1.2rem;">Min</span>`;
+                } else {
+                    document.getElementById('demo-pos').innerText = "Ready";
+                    document.getElementById('demo-pos').style.color = "var(--queue-green)";
+                    document.getElementById('demo-pos').style.textShadow = "0 0 15px rgba(0, 208, 132, 0.4)";
+                    
+                    document.getElementById('demo-eta').innerHTML = `0 <span style="font-size: 1.2rem;">Min</span>`;
+                    document.getElementById('demo-status').innerText = "Table is ready!";
+                    
+                    const pulse = document.getElementById('demo-pulse');
+                    pulse.style.animation = 'none';
+                    pulse.style.boxShadow = '0 0 20px var(--queue-green)';
+                    pulse.style.background = 'var(--queue-green)';
+                    
+                    clearInterval(interval);
+                }
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
