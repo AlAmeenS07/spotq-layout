@@ -418,12 +418,20 @@ header {
     padding-bottom: 24px;
     border-bottom: 1px solid rgba(255,255,255,0.05);
     color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .pain-points li span {
     color: #ef4444;
-    margin-right: 12px;
-    font-weight: bold;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.pain-points li span svg {
+    stroke: #ef4444;
 }
 
 /* Timeline */
@@ -542,7 +550,13 @@ header {
     font-size: 2rem;
     color: var(--premium-amber);
     margin-bottom: 20px;
-    text-shadow: var(--neon-text);
+    display: flex;
+    align-items: center;
+}
+
+.bento-icon svg {
+    stroke: var(--premium-amber);
+    filter: drop-shadow(0 0 8px rgba(255, 157, 0, 0.4));
 }
 
 .bento-card h3 {
