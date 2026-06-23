@@ -13,7 +13,6 @@
     <!-- Header -->
     <header>
         <a href="index.html" class="logo">
-            <img src="assets/logo.png" alt="SpotQ Logo" onerror="this.style.display='none'">
             SpotQ
         </a>
         <nav class="nav-links">
@@ -44,32 +43,40 @@
         <div class="hero-content">
             <div class="hero-text reveal">
                 <!-- <div class="badge">AI-Powered Queue Experience</div> -->
-                <h1>Skip the Wait.<br><span class="text-gradient">Enjoy the Experience.</span></h1>
-                <p>Join restaurant queues remotely, track live wait times, and arrive exactly when your table is ready.</p>
+                <h1>Manage Crowds.<br><span class="text-gradient">Elevate Dining.</span></h1>
+                <p>Empower your front-of-house with a smart queue system. Let guests join via QR code, track their wait live, and arrive right when the table is ready.</p>
                 <div class="hero-actions">
-                    <button class="btn btn-primary" onclick="scrollToDemo()">Join Queue</button>
-                    <a href="#demo" class="btn btn-secondary">Watch Demo</a>
+                    <button class="btn btn-primary" onclick="scrollToDemo()">See Guest Experience</button>
+                    <a href="restaurant.html" class="btn btn-secondary">View Ops Dashboard</a>
                 </div>
             </div>
             
             <div class="hero-visual reveal delay-2">
                 <div class="widget glass">
-                    <div class="widget-row">
-                        <div>
-                            <div class="widget-label">Current Position</div>
-                            <div class="widget-value">#4</div>
-                        </div>
-                        <div style="text-align: right;">
-                            <div class="widget-label">Estimated Wait</div>
-                            <div class="widget-value amber">12 <span style="font-size: 1.2rem;">Min</span></div>
-                        </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(92, 58, 33, 0.1); padding-bottom: 16px;">
+                        <h3 style="font-size: 1.25rem; margin: 0;">Live Waitlist</h3>
+                        <span class="badge" style="margin: 0;">4 Parties</span>
                     </div>
                     
-                    <div class="widget-status">
-                        <div class="pulse"></div>
-                        <div>
-                            <div class="widget-label" style="margin: 0;">Status</div>
-                            <div style="font-weight: 600; font-size: 1.1rem;">Preparing Table</div>
+                    <div class="mini-ops-list">
+                        <div class="mini-ops-item">
+                            <div class="mini-ops-info">
+                                <h4>Alex J. • Party of 2</h4>
+                                <p style="color: var(--queue-green); font-weight: 600;">0 min wait (Ready)</p>
+                            </div>
+                            <button class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Assign Table</button>
+                        </div>
+                        <div class="mini-ops-item">
+                            <div class="mini-ops-info">
+                                <h4>Sarah S. • Party of 4</h4>
+                                <p style="color: var(--premium-purple); font-weight: 600;">5 min wait</p>
+                            </div>
+                        </div>
+                        <div class="mini-ops-item">
+                            <div class="mini-ops-info">
+                                <h4>Michael B. • Party of 2</h4>
+                                <p style="color: var(--premium-purple); font-weight: 600;">10 min wait</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -97,74 +104,88 @@
 
     <!-- SECTION 3: How SpotQ Works -->
     <section id="how-it-works" class="container">
-        <h2 class="reveal" style="text-align: center;">A Seamless Journey</h2>
+        <h2 class="reveal" style="text-align: center;">How It Works for Restaurants</h2>
         <div class="timeline-wrapper reveal delay-1">
             <div class="timeline">
                 <div class="timeline-step">
                     <div class="step-circle">1</div>
                     <div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Choose Restaurant</h4>
-                        <p style="font-size: 0.95rem;">Find premium dining spots near you.</p>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Scan QR</h4>
+                        <p style="font-size: 0.95rem;">Guests scan a code at the door or online.</p>
                     </div>
                 </div>
                 <div class="timeline-step">
                     <div class="step-circle">2</div>
                     <div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Join Queue</h4>
-                        <p style="font-size: 0.95rem;">Enter the waitlist from anywhere.</p>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Smart Queue</h4>
+                        <p style="font-size: 0.95rem;">They join the waitlist from their phone.</p>
                     </div>
                 </div>
                 <div class="timeline-step">
                     <div class="step-circle">3</div>
                     <div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Track ETA</h4>
-                        <p style="font-size: 0.95rem;">Watch your position move live.</p>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Live Tracking</h4>
+                        <p style="font-size: 0.95rem;">Guests wait anywhere, tracking ETA live.</p>
                     </div>
                 </div>
                 <div class="timeline-step">
                     <div class="step-circle">4</div>
                     <div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Notification</h4>
-                        <p style="font-size: 0.95rem;">Get alerted when your table is ready.</p>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Auto Alerts</h4>
+                        <p style="font-size: 0.95rem;">System notifies them when the table is set.</p>
                     </div>
                 </div>
                 <div class="timeline-step">
                     <div class="step-circle">5</div>
                     <div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Get Seated</h4>
-                        <p style="font-size: 0.95rem;">Walk in and sit down instantly.</p>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Smooth Seating</h4>
+                        <p style="font-size: 0.95rem;">Host seats them instantly without chaos.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 4: Live Queue Demo -->
+    <!-- SECTION 4: Customer Perspective (Split View) -->
     <section id="demo" class="demo-section" style="padding: 100px 24px;">
-        <div class="demo-container reveal">
-            <h2 style="text-align: center; margin-bottom: 40px;">Experience It Live</h2>
-            <div class="glass widget" style="animation: none;">
-                <div id="demo-content">
-                    <h3 style="margin-bottom: 24px;">Ready to grab a table?</h3>
-                    <button class="btn btn-primary" onclick="startDemo()" style="width: 100%;">Click to Join Queue</button>
+        <div class="container" style="padding: 0;">
+            <h2 class="reveal" style="text-align: center; margin-bottom: 60px;">The Seamless Guest Experience</h2>
+            
+            <div class="problem-grid">
+                <!-- Left: Scan QR -->
+                <div class="reveal">
+                    <div class="glass" style="padding: 40px; text-align: center; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                        <h3 style="margin-bottom: 16px; font-size: 1.8rem;">1. Scan to Join</h3>
+                        <p style="margin-bottom: 32px; font-size: 1.1rem;">Guests easily join the waitlist without downloading any apps.</p>
+                        <img src="assets/qr_code.png" alt="Scan QR Code" style="max-width: 200px; border-radius: 16px; box-shadow: 0 0 25px rgba(230, 126, 34, 0.3);">
+                    </div>
                 </div>
                 
-                <div id="demo-active" style="display: none; text-align: left;">
-                    <div class="widget-row">
-                        <div>
-                            <div class="widget-label">Your Position</div>
-                            <div class="widget-value" id="demo-pos">#4</div>
-                        </div>
-                        <div style="text-align: right;">
-                            <div class="widget-label">Est. Wait</div>
-                            <div class="widget-value amber" id="demo-eta">12 <span style="font-size: 1.2rem;">Min</span></div>
-                        </div>
-                    </div>
-                    <div class="widget-status">
-                        <div class="pulse" id="demo-pulse"></div>
-                        <div>
-                            <div class="widget-label" style="margin: 0;">Status</div>
-                            <div style="font-weight: 600; font-size: 1.1rem;" id="demo-status">In Queue</div>
+                <!-- Right: Live Tracking Widget -->
+                <div class="reveal delay-2">
+                    <div class="glass" style="padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-bottom: 16px; font-size: 1.8rem; text-align: center;">2. Live Tracking</h3>
+                        <p style="margin-bottom: 32px; font-size: 1.1rem; text-align: center;">Guests relax nearby and return exactly when called.</p>
+                        
+                        <div class="glass widget" style="animation: none; margin: 0 auto; width: 100%; max-width: 350px;">
+                            <div class="widget-row">
+                                <div>
+                                    <div class="widget-label">Your Position</div>
+                                    <div class="widget-value">#4</div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div class="widget-label">Est. Wait</div>
+                                    <div class="widget-value purple">12 <span style="font-size: 1.2rem;">Min</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="widget-status">
+                                <div class="pulse"></div>
+                                <div>
+                                    <div class="widget-label" style="margin: 0;">Status</div>
+                                    <div style="font-weight: 600; font-size: 1.1rem;">In Queue</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -236,9 +257,9 @@
     <!-- SECTION 8: Final CTA -->
     <section class="final-cta">
         <div class="container reveal">
-            <h2 style="font-size: 3rem; margin-bottom: 40px; text-shadow: var(--neon-amber-strong);">Transform Restaurant Waiting Into A Better Experience.</h2>
-            <p style="margin-bottom: 40px; font-size: 1.25rem;">Join the future of restaurant queue management.</p>
-            <button class="btn btn-primary" onclick="scrollToDemo()" style="font-size: 1.25rem; padding: 20px 48px; box-shadow: var(--neon-amber-strong);">Get Started With SpotQ</button>
+            <h2 style="font-size: 3rem; margin-bottom: 40px; text-shadow: var(--neon-purple-strong);">Transform Your Front-of-House Operations.</h2>
+            <p style="margin-bottom: 40px; font-size: 1.25rem;">Manage crowds efficiently through our smart queue platform.</p>
+            <a href="restaurant.html" class="btn btn-primary" style="box-shadow: var(--neon-purple-strong);">Try the Ops Dashboard</a>
         </div>
     </section>
 
@@ -256,10 +277,7 @@
         </div>
     </footer>
 
-    <!-- Mobile Sticky CTA -->
-    <div class="sticky-bottom-cta">
-        <button class="btn btn-primary" onclick="scrollToDemo()">Join Queue</button>
-    </div>
+
 
     <!-- Scripts -->
     <script>
@@ -291,38 +309,6 @@
         document.querySelectorAll('.reveal').forEach((el) => {
             observer.observe(el);
         });
-
-        // Live Demo Simulation
-        function startDemo() {
-            document.getElementById('demo-content').style.display = 'none';
-            document.getElementById('demo-active').style.display = 'block';
-            
-            let pos = 4;
-            let time = 12;
-            
-            const interval = setInterval(() => {
-                if(pos > 1) {
-                    pos--;
-                    time -= 3;
-                    document.getElementById('demo-pos').innerText = `#${pos}`;
-                    document.getElementById('demo-eta').innerHTML = `${time} <span style="font-size: 1.2rem;">Min</span>`;
-                } else {
-                    document.getElementById('demo-pos').innerText = "Ready";
-                    document.getElementById('demo-pos').style.color = "var(--queue-green)";
-                    document.getElementById('demo-pos').style.textShadow = "0 0 15px rgba(0, 208, 132, 0.4)";
-                    
-                    document.getElementById('demo-eta').innerHTML = `0 <span style="font-size: 1.2rem;">Min</span>`;
-                    document.getElementById('demo-status').innerText = "Table is ready!";
-                    
-                    const pulse = document.getElementById('demo-pulse');
-                    pulse.style.animation = 'none';
-                    pulse.style.boxShadow = '0 0 20px var(--queue-green)';
-                    pulse.style.background = 'var(--queue-green)';
-                    
-                    clearInterval(interval);
-                }
-            }, 3000);
-        }
     </script>
 </body>
 </html>
